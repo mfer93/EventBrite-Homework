@@ -88,7 +88,7 @@ namespace Numero_Magico
             NumeroTxtBox.Clear();
         }
 
-        private bool Trampa(int unNumero)
+        private bool Trampa(int unNumero) //Controla que el usuario no añada intentos, una vez que la computadora encontro el número
         {
             if (ultimoNumero == unNumero)
                 return true;
@@ -98,7 +98,7 @@ namespace Numero_Magico
 
         private void menorBtn_Click(object sender, EventArgs e)
         {
-            adivinador.Pregunta(1);
+            adivinador.Pregunta(1); // Piensa un numero mas chico
             if (Trampa(adivinador.Pregunta(0))){
                 MessageBox.Show("No Mientas! ya adiviné\n Y solo me llevo " + adivinador.GetIntentos() + " intentos\n");
                 vsHuman_CheckedChanged(sender, e);
@@ -113,7 +113,7 @@ namespace Numero_Magico
 
         private void mayorBtn_Click(object sender, EventArgs e)
         {
-            adivinador.Pregunta(-1);
+            adivinador.Pregunta(-1); // Piensa un numero mas grande
             if (Trampa(adivinador.Pregunta(0)))
             {
                 MessageBox.Show("No Mientas! ya adiviné\n Y solo me llevo " + adivinador.GetIntentos() + " intentos\n");
