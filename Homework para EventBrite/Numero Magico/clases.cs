@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Numero_Magico
+namespace clases
 {
     public class Game
     {
@@ -61,14 +61,15 @@ namespace Numero_Magico
         public int Pregunta(int unaRespuesta) // desplaza el rango de busqueda y piensa un nuevo numero basado en la respuesta recibida. 
                                               // 1: el numero es menor. -1: el numero es mayor
         {
-            this.intentos++;
             switch (unaRespuesta)
             {
                 case 1:
+                    this.intentos++;
                     limSuperior = this.number;
                     piensaNumero();
                     break;
                 case -1:
+                    this.intentos++;
                     limInferior = this.number;
                     piensaNumero();
                     break;

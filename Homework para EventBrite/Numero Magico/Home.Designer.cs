@@ -30,20 +30,20 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Home));
             this.radioGroup = new System.Windows.Forms.GroupBox();
-            this.vsComputer = new System.Windows.Forms.RadioButton();
-            this.vsHuman = new System.Windows.Forms.RadioButton();
-            this.vsComputerGroup = new System.Windows.Forms.GroupBox();
             this.vsHumanGroup = new System.Windows.Forms.GroupBox();
-            this.vsComputerLog = new System.Windows.Forms.RichTextBox();
-            this.NumeroTxtBox = new System.Windows.Forms.TextBox();
-            this.preguntaBtn = new System.Windows.Forms.Button();
+            this.igualBtn = new System.Windows.Forms.Button();
+            this.mayorBtn = new System.Windows.Forms.Button();
+            this.menorBtn = new System.Windows.Forms.Button();
             this.vsHumanLog = new System.Windows.Forms.RichTextBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.vsComputerGroup = new System.Windows.Forms.GroupBox();
+            this.preguntaBtn = new System.Windows.Forms.Button();
+            this.NumeroTxtBox = new System.Windows.Forms.TextBox();
+            this.vsComputerLog = new System.Windows.Forms.RichTextBox();
+            this.vsHuman = new System.Windows.Forms.RadioButton();
+            this.vsComputer = new System.Windows.Forms.RadioButton();
             this.radioGroup.SuspendLayout();
-            this.vsComputerGroup.SuspendLayout();
             this.vsHumanGroup.SuspendLayout();
+            this.vsComputerGroup.SuspendLayout();
             this.SuspendLayout();
             // 
             // radioGroup
@@ -59,6 +59,112 @@
             this.radioGroup.TabStop = false;
             this.radioGroup.Text = "Modo de Juego";
             // 
+            // vsHumanGroup
+            // 
+            this.vsHumanGroup.Controls.Add(this.igualBtn);
+            this.vsHumanGroup.Controls.Add(this.mayorBtn);
+            this.vsHumanGroup.Controls.Add(this.menorBtn);
+            this.vsHumanGroup.Controls.Add(this.vsHumanLog);
+            this.vsHumanGroup.Location = new System.Drawing.Point(481, 77);
+            this.vsHumanGroup.Name = "vsHumanGroup";
+            this.vsHumanGroup.Size = new System.Drawing.Size(445, 445);
+            this.vsHumanGroup.TabIndex = 3;
+            this.vsHumanGroup.TabStop = false;
+            // 
+            // igualBtn
+            // 
+            this.igualBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.igualBtn.Location = new System.Drawing.Point(167, 327);
+            this.igualBtn.Name = "igualBtn";
+            this.igualBtn.Size = new System.Drawing.Size(110, 35);
+            this.igualBtn.TabIndex = 3;
+            this.igualBtn.Text = "Correcto!";
+            this.igualBtn.UseVisualStyleBackColor = true;
+            this.igualBtn.Click += new System.EventHandler(this.igualBtn_Click);
+            // 
+            // mayorBtn
+            // 
+            this.mayorBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mayorBtn.Location = new System.Drawing.Point(329, 327);
+            this.mayorBtn.Name = "mayorBtn";
+            this.mayorBtn.Size = new System.Drawing.Size(110, 35);
+            this.mayorBtn.TabIndex = 2;
+            this.mayorBtn.Text = "Mayor";
+            this.mayorBtn.UseVisualStyleBackColor = true;
+            this.mayorBtn.Click += new System.EventHandler(this.mayorBtn_Click);
+            // 
+            // menorBtn
+            // 
+            this.menorBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.menorBtn.Location = new System.Drawing.Point(7, 328);
+            this.menorBtn.Name = "menorBtn";
+            this.menorBtn.Size = new System.Drawing.Size(110, 35);
+            this.menorBtn.TabIndex = 1;
+            this.menorBtn.Text = "Menor";
+            this.menorBtn.UseVisualStyleBackColor = true;
+            this.menorBtn.Click += new System.EventHandler(this.menorBtn_Click);
+            // 
+            // vsHumanLog
+            // 
+            this.vsHumanLog.Location = new System.Drawing.Point(7, 20);
+            this.vsHumanLog.Name = "vsHumanLog";
+            this.vsHumanLog.ReadOnly = true;
+            this.vsHumanLog.Size = new System.Drawing.Size(432, 301);
+            this.vsHumanLog.TabIndex = 0;
+            this.vsHumanLog.Text = "";
+            // 
+            // vsComputerGroup
+            // 
+            this.vsComputerGroup.Controls.Add(this.preguntaBtn);
+            this.vsComputerGroup.Controls.Add(this.NumeroTxtBox);
+            this.vsComputerGroup.Controls.Add(this.vsComputerLog);
+            this.vsComputerGroup.Location = new System.Drawing.Point(6, 77);
+            this.vsComputerGroup.Name = "vsComputerGroup";
+            this.vsComputerGroup.Size = new System.Drawing.Size(445, 445);
+            this.vsComputerGroup.TabIndex = 2;
+            this.vsComputerGroup.TabStop = false;
+            // 
+            // preguntaBtn
+            // 
+            this.preguntaBtn.Location = new System.Drawing.Point(303, 328);
+            this.preguntaBtn.Name = "preguntaBtn";
+            this.preguntaBtn.Size = new System.Drawing.Size(136, 23);
+            this.preguntaBtn.TabIndex = 2;
+            this.preguntaBtn.Text = "Es tu Número?";
+            this.preguntaBtn.UseVisualStyleBackColor = true;
+            this.preguntaBtn.Click += new System.EventHandler(this.preguntaBtn_Click);
+            // 
+            // NumeroTxtBox
+            // 
+            this.NumeroTxtBox.Location = new System.Drawing.Point(7, 328);
+            this.NumeroTxtBox.MaxLength = 3;
+            this.NumeroTxtBox.Name = "NumeroTxtBox";
+            this.NumeroTxtBox.Size = new System.Drawing.Size(289, 20);
+            this.NumeroTxtBox.TabIndex = 1;
+            this.NumeroTxtBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.NumeroTxtBox_KeyPress);
+            // 
+            // vsComputerLog
+            // 
+            this.vsComputerLog.Location = new System.Drawing.Point(7, 20);
+            this.vsComputerLog.Name = "vsComputerLog";
+            this.vsComputerLog.ReadOnly = true;
+            this.vsComputerLog.Size = new System.Drawing.Size(432, 301);
+            this.vsComputerLog.TabIndex = 0;
+            this.vsComputerLog.Text = "";
+            // 
+            // vsHuman
+            // 
+            this.vsHuman.AutoSize = true;
+            this.vsHuman.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.vsHuman.Location = new System.Drawing.Point(601, 42);
+            this.vsHuman.Name = "vsHuman";
+            this.vsHuman.Size = new System.Drawing.Size(207, 29);
+            this.vsHuman.TabIndex = 1;
+            this.vsHuman.TabStop = true;
+            this.vsHuman.Text = "Adivinaré tu Numero";
+            this.vsHuman.UseVisualStyleBackColor = true;
+            this.vsHuman.CheckedChanged += new System.EventHandler(this.vsHuman_CheckedChanged);
+            // 
             // vsComputer
             // 
             this.vsComputer.AutoSize = true;
@@ -72,108 +178,6 @@
             this.vsComputer.UseVisualStyleBackColor = true;
             this.vsComputer.CheckedChanged += new System.EventHandler(this.vsComputer_CheckedChanged);
             // 
-            // vsHuman
-            // 
-            this.vsHuman.AutoSize = true;
-            this.vsHuman.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.vsHuman.Location = new System.Drawing.Point(601, 42);
-            this.vsHuman.Name = "vsHuman";
-            this.vsHuman.Size = new System.Drawing.Size(207, 29);
-            this.vsHuman.TabIndex = 1;
-            this.vsHuman.TabStop = true;
-            this.vsHuman.Text = "Adivinaré tu Numero";
-            this.vsHuman.UseVisualStyleBackColor = true;
-            // 
-            // vsComputerGroup
-            // 
-            this.vsComputerGroup.Controls.Add(this.preguntaBtn);
-            this.vsComputerGroup.Controls.Add(this.NumeroTxtBox);
-            this.vsComputerGroup.Controls.Add(this.vsComputerLog);
-            this.vsComputerGroup.Location = new System.Drawing.Point(6, 77);
-            this.vsComputerGroup.Name = "vsComputerGroup";
-            this.vsComputerGroup.Size = new System.Drawing.Size(445, 445);
-            this.vsComputerGroup.TabIndex = 2;
-            this.vsComputerGroup.TabStop = false;
-            // 
-            // vsHumanGroup
-            // 
-            this.vsHumanGroup.Controls.Add(this.button4);
-            this.vsHumanGroup.Controls.Add(this.button3);
-            this.vsHumanGroup.Controls.Add(this.button2);
-            this.vsHumanGroup.Controls.Add(this.vsHumanLog);
-            this.vsHumanGroup.Location = new System.Drawing.Point(481, 77);
-            this.vsHumanGroup.Name = "vsHumanGroup";
-            this.vsHumanGroup.Size = new System.Drawing.Size(445, 445);
-            this.vsHumanGroup.TabIndex = 3;
-            this.vsHumanGroup.TabStop = false;
-            // 
-            // vsComputerLog
-            // 
-            this.vsComputerLog.Location = new System.Drawing.Point(7, 20);
-            this.vsComputerLog.Name = "vsComputerLog";
-            this.vsComputerLog.ReadOnly = true;
-            this.vsComputerLog.Size = new System.Drawing.Size(432, 301);
-            this.vsComputerLog.TabIndex = 0;
-            this.vsComputerLog.Text = "";
-            // 
-            // NumeroTxtBox
-            // 
-            this.NumeroTxtBox.Location = new System.Drawing.Point(7, 328);
-            this.NumeroTxtBox.Name = "NumeroTxtBox";
-            this.NumeroTxtBox.Size = new System.Drawing.Size(289, 20);
-            this.NumeroTxtBox.TabIndex = 1;
-            this.NumeroTxtBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.NumeroTxtBox_KeyPress);
-            // 
-            // preguntaBtn
-            // 
-            this.preguntaBtn.Location = new System.Drawing.Point(303, 328);
-            this.preguntaBtn.Name = "preguntaBtn";
-            this.preguntaBtn.Size = new System.Drawing.Size(136, 23);
-            this.preguntaBtn.TabIndex = 2;
-            this.preguntaBtn.Text = "Es tu Número?";
-            this.preguntaBtn.UseVisualStyleBackColor = true;
-            this.preguntaBtn.Click += new System.EventHandler(this.preguntaBtn_Click);
-            // 
-            // vsHumanLog
-            // 
-            this.vsHumanLog.Location = new System.Drawing.Point(7, 20);
-            this.vsHumanLog.Name = "vsHumanLog";
-            this.vsHumanLog.ReadOnly = true;
-            this.vsHumanLog.Size = new System.Drawing.Size(432, 301);
-            this.vsHumanLog.TabIndex = 0;
-            this.vsHumanLog.Text = "";
-            this.vsHumanLog.TextChanged += new System.EventHandler(this.vsHumanLog_TextChanged);
-            // 
-            // button2
-            // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(7, 328);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(110, 35);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Menor";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(329, 327);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(110, 35);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "Mayor";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // button4
-            // 
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(167, 327);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(110, 35);
-            this.button4.TabIndex = 3;
-            this.button4.Text = "Correcto!";
-            this.button4.UseVisualStyleBackColor = true;
-            // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -185,9 +189,9 @@
             this.Text = "Numero Mágico";
             this.radioGroup.ResumeLayout(false);
             this.radioGroup.PerformLayout();
+            this.vsHumanGroup.ResumeLayout(false);
             this.vsComputerGroup.ResumeLayout(false);
             this.vsComputerGroup.PerformLayout();
-            this.vsHumanGroup.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -199,9 +203,9 @@
         private System.Windows.Forms.GroupBox vsComputerGroup;
         private System.Windows.Forms.RadioButton vsHuman;
         private System.Windows.Forms.RadioButton vsComputer;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button igualBtn;
+        private System.Windows.Forms.Button mayorBtn;
+        private System.Windows.Forms.Button menorBtn;
         private System.Windows.Forms.RichTextBox vsHumanLog;
         private System.Windows.Forms.Button preguntaBtn;
         private System.Windows.Forms.TextBox NumeroTxtBox;
